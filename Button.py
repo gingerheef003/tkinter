@@ -33,4 +33,47 @@ st = Button(
 )
 st.pack()
 
+#To show various reliefs
+rlf1 = Button(
+    top,
+    text="Groove",
+    relief=GROOVE
+)
+rlf1.pack(side=LEFT)
+
+rlf2 = Button(
+    top,
+    text="Ridge",
+    relief=RIDGE
+)
+rlf2.pack(side=LEFT)
+
+rlf3 = Button(
+    top,
+    text="Sunken",
+    relief=SUNKEN
+)
+rlf3.pack(side=LEFT)
+
+rlf4 = Button(
+    top,
+    text="Flat",
+    relief=FLAT
+)
+rlf4.pack(side=LEFT)
+
+rlf5 = Button(
+    top,
+    text="Raised",
+    relief=RAISED
+)
+rlf5.pack(side=LEFT)
+
+rlf6 = Button(
+    top,
+    text="Solid",
+    relief=SOLID
+)
+rlf6.pack(side=LEFT)
+
 top.mainloop()
