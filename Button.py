@@ -12,9 +12,25 @@ b = Button(
     fg="red",
     command=lambda: print('Hello World!'),
     #font="",
-    state="active",
+    state="disabled",
     text="print 'Hello World!'",
 )
 b.pack()
+
+#funcion to enable or diable the button
+def disen():
+    if b['state'] == "normal":
+        b['state'] = "disabled"
+        st['text'] = "Enable"
+    elif b['state'] == "disabled":
+        b['state'] = "normal"
+        st['text'] = "Disable"
+    
+st = Button(
+    top,
+    text="Enable",
+    command=disen
+)
+st.pack()
 
 top.mainloop()
