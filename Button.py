@@ -15,7 +15,7 @@ b = Button(
     state="disabled",
     text="print 'Hello World!'",
 )
-b.pack()
+b.grid(row=0, column=0)
 
 #funcion to enable or diable the button
 def disen():
@@ -31,49 +31,20 @@ st = Button(
     text="Enable",
     command=disen
 )
-st.pack()
+st.grid(row=0, column=1)
 
 #To show various reliefs
-rlf1 = Button(
-    top,
-    text="Groove",
-    relief=GROOVE
-)
-rlf1.pack(side=LEFT)
-
-rlf2 = Button(
-    top,
-    text="Ridge",
-    relief=RIDGE
-)
-rlf2.pack(side=LEFT)
-
-rlf3 = Button(
-    top,
-    text="Sunken",
-    relief=SUNKEN
-)
-rlf3.pack(side=LEFT)
-
-rlf4 = Button(
-    top,
-    text="Flat",
-    relief=FLAT
-)
-rlf4.pack(side=LEFT)
-
-rlf5 = Button(
-    top,
-    text="Raised",
-    relief=RAISED
-)
-rlf5.pack(side=LEFT)
-
-rlf6 = Button(
-    top,
-    text="Solid",
-    relief=SOLID
-)
-rlf6.pack(side=LEFT)
+buttons = []
+reliefs = [
+    "groove",
+    "ridge",
+    "sunken",
+    "flat",
+    "raised",
+    "solid",
+]
+for i in range(6):
+    buttons.append(Button(top, relief=reliefs[i], text=reliefs[i].title()))
+    buttons[i].grid(row=1, column=i)
 
 top.mainloop()
