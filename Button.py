@@ -13,7 +13,7 @@ b = Button(
     command=lambda: print('Hello World!'),
     #font="",
     state="disabled",
-    text="print 'Hello World!'",
+    text="print",
 )
 b.grid(row=0, column=0)
 
