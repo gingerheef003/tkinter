@@ -1,13 +1,13 @@
 from tkinter import *
 
 top = Tk()
-top.geometry("200x100")
-
+#top.attributes('-zoomed', True)
+top.geometry("500x500")
 
 b = Button(
     top,
-    activebackground="red",
-    activeforeground="black",
+    activebackground="black",
+    activeforeground="green",
     bg="white",
     fg="red",
     command=lambda: print('Hello World!'),
@@ -15,7 +15,7 @@ b = Button(
     state="disabled",
     text="print",
 )
-b.grid(row=0, column=0)
+b.place(relx=0.5, rely=0.5, anchor=CENTER)
 
 #funcion to enable or diable the button
 def disen():
@@ -31,7 +31,7 @@ st = Button(
     text="Enable",
     command=disen
 )
-st.grid(row=0, column=1)
+st.place(relx=0.5, anchor=N)
 
 #To show various reliefs
 buttons = []
@@ -45,6 +45,6 @@ reliefs = [
 ]
 for i in range(6):
     buttons.append(Button(top, relief=reliefs[i], text=reliefs[i].title()))
-    buttons[i].grid(row=1, column=i)
+    buttons[i].place(relx=i/6, y=30, relwidth=1/6)
 
 top.mainloop()
